@@ -34,19 +34,28 @@ cout << "these are their ages :" << endl;
 for (int i = 0; i < 4 ; i++){
     cout << myfriends[i] << " is " << age[i]  << endl;
 }
-
     //❓❓ Lab Question 8:
     //Below this comment, that finds the age of your oldest friend.
 int oldest = 0;
 for (int i= 0; i < 4; i++){
-    if ( 52 > oldest ){
-        oldest = 52 ;
+    if ( age[i] > oldest ){
+        oldest = age[i] ;
     }
 }
 cout << "my oldest friend is " << oldest << " years old" << endl; 
 
-
     //❓❓ Lab Question 9:
     //Below this comment, that finds the NAME of your oldest friend.
+oldest = 0;
+int oldestfriendindex=0;
+for (int i= 0; i < 4; i++){
+    if ( age[i] > oldest ){
+        oldest = age[i] ;
+        oldestfriendindex = i;
+    }
+}
+cout << "my oldest friend is named " << myfriends[oldestfriendindex] << endl; 
 
 
+
+}
